@@ -385,7 +385,8 @@ text-decoration: none;
     font-family: monospace;
     font-size: 2vh;
     display: block;
-    margin-left: 5%;
+    margin: auto;
+text-align:center;
     margin-top: 2%;
 }
 
