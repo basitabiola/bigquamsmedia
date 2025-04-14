@@ -94,12 +94,12 @@ img{
 @keyframes description{
     1%{
 width: 0ch;
-font-size: 3vh;
+font-size: 2vh;
 
     }
     100%{
 width: 24ch ;
-font-size: 3vh;
+font-size: 2vh;
     }
 }
 
