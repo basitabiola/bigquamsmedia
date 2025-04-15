@@ -519,7 +519,7 @@ margin: auto;
     margin: auto;
     width: 90%;
     background: rgb(218, 218, 218);
-    height: 43vh;
+    height: 38vh;
     background: none;
     display: flex;
     gap: 3%;
@@ -527,7 +527,6 @@ margin: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     border-radius: 10px;
-
 }
 
 /* hover effect for .parent003  */
