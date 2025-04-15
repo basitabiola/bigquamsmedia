@@ -47,20 +47,30 @@ a {
 .profile-pics{
     margin-top: 10%;
    margin: auto;
-width: 20vh;
-height: 20vh;
+width: 22vh;
+height: 22vh;
 border: 10px double white;
 background-size: 100%;
 border-radius: 50%;
 background-position: center;
 transition-duration: 1s;
 background-image: url(IMG-20250413-WA0025.jpg) ;
+animation: shadow 1s ease-in infinite alternate;
+}
+
+@keyframes shadow {
+    1%{
+box-shadow: 0px 1px 2px;
+    }
+    100%{
+        box-shadow: 0px 2px 6px;
+    }
 }
 
 .profile-pics:hover {
     box-shadow: 0px 2px 6px ;
-    width: 22vh;
-        height: 23vh;
+    width: 24vh;
+        height: 24vh;
 }
 
 /* name */
