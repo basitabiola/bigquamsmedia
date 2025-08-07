@@ -6,18 +6,12 @@
 }
 
 /* body */
-body{
-    transition: background-color 0.3s, color 0.3s;
-
-}
 
 body{
     background-color: white;
     color: black;
-    
+    min-height: 100vh;
 }
-
-
 
 /* nav bar */
 .navbar{
@@ -33,8 +27,8 @@ body{
 }
 
 .tell {
-    font-size: 6vh;
-    margin-left: 70%;
+    font-size: 5vh;
+    margin-left: 75%;
     color: green;
     text-decoration: none;
 }
@@ -47,17 +41,32 @@ a {
 .profile-pics{
     margin-top: 10%;
    margin: auto;
-width: 22vh;
-height: 22vh;
-border: 10px double white;
+width:calc(50px + 27vw);
+height: calc(50px + 27vw);
+border: 7px double white;
 background-size: 100%;
 border-radius: 50%;
 background-position: center;
-transition-duration: 1s;
-background-image: url(IMG-20250413-WA0025.jpg) ;
-animation: shadow 1s ease-in infinite alternate;
+transition-duration: 1s;  
+background-image: url(quamdeen.jpg);
+animation: anims 1s linear ;  
+} 
+
+/* animation for the first load of home page */
+@keyframes anims {
+    1%{
+        margin-top: 70%;
+        width: calc(500px + 35vw);    
+            height: calc(500px + 35vw);
+    }
+    100%{
+        margin-top: 10%;   
+            width: calc(50px + 27vw);
+            height: calc(50px + 27vw);
+    }
 }
 
+/* animation for the profile pics shadow */
 @keyframes shadow {
     1%{
 box-shadow: 0px 1px 2px;
@@ -69,14 +78,14 @@ box-shadow: 0px 1px 2px;
 
 .profile-pics:hover {
     box-shadow: 0px 2px 6px ;
-    width: 24vh;
-        height: 24vh;
+    width: calc(60px + 30vw);
+    height: calc(60px + 30vw);
 }
 
 /* name */
 .name{
     font-weight: bolder;
-    font-size: 3.5vh;
+    font-size: calc(10px + 4vw);
     display: block;
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -100,7 +109,7 @@ img{
 /* description */
 .description{
 margin: auto;
-    font-size: 2vh;
+    font-size: calc(10px + 2vw);
     font-family: monospace;
     width: 23ch;
     font-weight: bolder;
@@ -113,12 +122,10 @@ margin: auto;
 @keyframes description{
     1%{
 width: 0ch;
-font-size: 2vh;
 
     }
     100%{
 width: 23ch ;
-font-size: 2vh;
     }
 }
 
@@ -130,32 +137,32 @@ height: 10vh;
 margin: auto;
 display: grid;
 grid-template-columns: auto auto auto;
+margin-bottom: 5%;
 }
-
 
 /* childs of grades */
 .child{
     width: 90%;
     height:9vh ;
-   
     margin-left: 5%;
     text-align: center;
-    
 }
-/* descriptions */
 
+/* descriptions */
 .years {
 font-weight: bolder;
-font-size: 3vh;
+font-size: calc(10px + 4vw);
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 
 .topic{
-font-size: 2vh;
+font-size: calc(7px + 2vw);
 font-weight: bolder;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 color: black;
+display: block;
+margin-bottom: 10%;
 }
 
 /* for the downlaod cv and contact me */
@@ -165,10 +172,10 @@ width: 35%;
 margin-left: 10%;
 margin-top: 3.5%;
 border: none;
-height: 6.5vh;
+height: calc(30px + 5vw);
 cursor: pointer;
 font-weight: bolder;
-font-size: 2vh;
+font-size: calc(7px + 2vw);
 color: white;
 background: rgb(27, 144, 190);
 border-radius: 10px;
@@ -179,8 +186,8 @@ border-radius: 10px;
 width: 35%;
 margin-left: 10%;
     border: none;
-    height: 6.5vh;
-    font-size: 2.2vh;
+    height: calc(30px + 5vw);
+    font-size: calc(8px + 2vw);
     color: black;
     font-weight: bolder;
     background: rgba(212, 208, 208, 0.938);
@@ -192,7 +199,7 @@ margin-left: 10%;
     margin: auto;
     margin-top: 5%;
     border-radius: 10px;
-    height: 9vh;
+    height: calc(35px + 5vw);
     background: rgba(212, 208, 208, 0.938);
 }
 
@@ -200,97 +207,67 @@ margin-left: 10%;
 
 .portfolio{
     width: 40%;
-    height: 7vh;
+    height: calc(20px + 6vw);
     border: none;
     background: white;
     margin-left: 5%;
     margin-top: 2%;
+    margin-bottom: 5%;
     border-radius: 10px;
     font-weight: bolder;
     font-family: verdana;
         color: black;
-        font-size: 2.5vh;
+        font-size: calc(7px + 2vw);
 }
 
 
 
 /* skills */
 .skills{
-    font-size: 2.5vh;
+    font-size: calc(7px + 2vw);
     color: black;
     font-weight: bolder;
         font-family: verdana;
         padding-left: 12%;
         border: 5px solid white;
         width: 40%;
-        margin-top: 2%;
-            height: 7vh;
+        margin-top: 1%;
+            height: calc(20px + 6vw);
             margin-left: 9%;
-            border-radius: 15px;
+            border-radius: 10px;
          padding-left: 2%;
-         background: none;
+         background: white;
          cursor: pointer;
          box-sizing: border-box;
 }
 
 
 
-/* tools */
+/* tools name*/
 .tools{
 font-family: verdana;
-font-size: 3vh;
+font-size: calc(10px + 3vw);
 font-weight: bolder;
 display: block;
-padding-top: 5%;
+padding-top: 8%;
 padding-left: 40%;
 }
 
-.toolsp{
-width: 90%;
-height: 12vh;
-background: rgba(212, 208, 208, 0.938);
-margin-left: 5%;
-margin-top: 5%;
-border-radius: 10px;
-display: grid;
-grid-template-columns: 23% 25% 25% 22%;
-gap: 1%;
-}
-
-.toolsc{
-width: 90%;
-height: 8vh;
-background: white;
-margin-top: 5%;
-margin-left: 5%;
-border-radius: 10px;
-}
-
-/* tools names */
-.t-names{
-width: 90%;
-    height: 2.3vh;
-    background: rgba(212, 208, 208, 0.938);
-    margin-left: 5%;
-    margin-top: -5%;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-}
-.t-name{
-    margin: auto;
-    font-size: 2vh;
-   font-family: verdana;
+.tools-img{
+    width: 80%;
+   margin-left: 10%;
+   border-radius: 15px;
+   border-bottom: 3px solid rgba(212, 208, 208, 0.938);
 }
 
 
 /* previous work */
 
 .recent{
-    font-size: 3vh;
+    font-size: calc(10px + 3vw);
     font-weight: bolder;
     font-family: verdana;
-    padding-top: 10%;
+    padding-top: 13%;
     padding-left: 25%;
     display: block;
     padding-bottom: 5%;
@@ -298,10 +275,11 @@ width: 90%;
 
 /* logos */
 .logo {
-    font-size: 3vh;
+    font-size: calc(10px + 3vw);
     font-weight: bolder;
     font-family: verdana;
     margin-bottom: 3%;
+    padding-top: 10%;
     text-align: center;
     display: block;
 }
@@ -311,7 +289,7 @@ width: 90%;
 .parent1{
 margin: auto;
     width: 90%;
-    height: 38vh;
+    height: calc(200px + 26vw);
     background: none;
     display: flex;
     gap: 3%;
@@ -331,8 +309,8 @@ margin: auto;
 /* child */
 .child1{
     width: 90%;
-        height: 37vh;
-        background-image: url(aduni.jpg);
+        height: calc(200px + 24vw);
+        background-image: url(harjorkeh.jpg);
         background-size: 100%;
         border-radius: 15px;
         scroll-snap-align: center;
@@ -343,7 +321,7 @@ margin: auto;
 }
 .child2 {
     width: 90%;
-    height: 37vh;
+    height: calc(200px + 24vw);
     background-image: url(dupsy.jpg);
     background-size: 100%;
     border-radius: 15px;
@@ -355,7 +333,7 @@ margin: auto;
 }
 .child3 {
     width: 90%;
-    height: 37vh;
+    height: calc(200px + 24vw);
     background-image: url(quams.jpg);
     background-size: 100%;
     border-radius: 15px;
@@ -367,7 +345,7 @@ margin: auto;
 }
 .child4 {
     width: 90%;
-    height: 37vh;
+    height: calc(200px + 24vw);
     background-image: url(welcome.jpg);
     background-size: 100%;
     border-radius: 15px;
@@ -379,8 +357,7 @@ margin: auto;
 }
 .child5 {
     width: 90%;
-    height: 37vh;
-    background-image: url(crochet-hat.jpg);
+    height: calc(200px + 26vw);    background-image: url(crochet-hat.jpg);
     background-size: 100%;
     border-radius: 15px;
     scroll-snap-align: center;
@@ -395,7 +372,7 @@ margin: auto;
     margin: auto;
     width: 90%;
     background: rgb(218, 218, 218);
-    height: 38vh;
+    height: calc(200px + 26vw);
     background: none;
     display: flex;
     gap: 1%;
@@ -414,8 +391,7 @@ margin: auto;
 /* child */
 .child01 {
     width: 90%;
-    height: 37vh;
-    background-image: url(f.jpg);
+    height: calc(200px + 26vw);     background-image: url(f.jpg);
     background-size: 100%;
     border-radius: 15px;
     scroll-snap-align: center;
@@ -426,8 +402,7 @@ margin: auto;
 }
 .child02 {
     width: 90%;
-    height: 37vh;
-    background-image: url(o1.jpg);
+    height: calc(200px + 26vw);     background-image: url(o1.jpg);
     background-size: 100%;
     border-radius: 15px;
     scroll-snap-align: center;
@@ -438,8 +413,7 @@ margin: auto;
 }
 .child03 {
     width: 90%;
-    height: 37vh;
-    background-image: url(logo.jpg);
+    height: calc(200px + 26vw);     background-image: url(logo.jpg);
     background-size: 100%;
     border-radius: 15px;
     scroll-snap-align: center;
@@ -450,8 +424,7 @@ margin: auto;
 }
 .child04 {
     width: 90%;
-    height: 37vh;
-    background-image: url(tb.jpg);
+    height: calc(200px + 26vw);     background-image: url(tb.jpg);
     background-size: 100%;
     border-radius: 15px;
     scroll-snap-align: center;
@@ -462,8 +435,7 @@ margin: auto;
 }
 .child05 {
     width: 90%;
-    height: 37vh;
-    background-image: url(sr.jpg);
+    height: calc(200px + 26vw);     background-image: url(sr.jpg);
     background-size: 100%;
     border-radius: 15px;
     scroll-snap-align: center;
@@ -478,7 +450,7 @@ margin: auto;
 
 .projects1{
     width: 80%;
-    height: 37vh;
+    height: calc(200px + 25vw);
     background-image: url(bq.jpg);
     background-size: 100%;
     margin-top: 7%;
@@ -487,19 +459,20 @@ margin: auto;
 }
 .projects2 {
     width: 80%;
-    height: 37vh;
-    background-image: url(airtime.jpg);
+    height: calc(200px + 22vw);
+    background-image: url(ibb.jpg);
     background-size: 100%;
     margin-top: 12%;
+    box-shadow: 0px 5px 15px grey;
     border-radius: 15px;
     margin-left: 10%;
 }
 .projects3 {
     width: 80%;
-    height: 37vh;
-    background-image: url(jaiye-luxe.jpg);
+    height: calc(200px + 24vw);     background-image: url(quams.jpg);
     background-size: 100%;
     margin-top: 12%;
+    box-shadow: 0px 5px 15px grey;
     border-radius: 15px;
     margin-left: 10%;
 }
@@ -523,13 +496,34 @@ margin: auto;
 }
 
 /* for the videos */
+/* parent */
+.parent004 {
+    margin: auto;
+    width: 90%;
+    background: none;
+    height: 70vh;
+    display: flex;
+    gap: 3%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    border-radius: 10px;
+}
+
+/* hover effect for .parent003  */
+.parent004:hover {
+    box-shadow: 0px 6px 15px grey;
+}
+
+
+
 
 /* parent */
 .parent003 {
     margin: auto;
     width: 90%;
     background: rgb(218, 218, 218);
-    height: 38vh;
+    height: calc(200px + 26vw);     
     background: none;
     display: flex;
     gap: 3%;
@@ -547,7 +541,7 @@ margin: auto;
 /* child */
 .child001 {
     width: 90%;
-    height: 37vh;
+    height: calc(200px + 26vw); 
     background-image: url(f.jpg);
     background-size: 100%;
     border-radius: 15px;
@@ -560,7 +554,7 @@ margin: auto;
 
 .child002 {
     width: 90%;
-    height: 37vh;
+    height: calc(200px + 26vw);
     background-image: url(f.jpg);
     background-size: 100%;
     border-radius: 15px;
@@ -581,22 +575,22 @@ video{
 .tittle{
     font-weight: bolder;
     font-family: verdana;
-    font-size: 3vh;
+    font-size: calc(10px + 3vw);
     margin-left: 10%;
     padding-top: 2%;
     display: block;
 }
 
 /* hover for all div */
-.projects1,.projects2:hover{
-    box-shadow: 0px 5px 15px grey;
+.projects1:hover{
+    box-shadow: 0px 5px 25px grey;
 }
 
 /* footer */
 
 .footer{
     width: 100%;
-    height: 33vh;
+    height: calc(160px + 30vw);
     background: rgba(165, 161, 161, 0.938);
     margin-bottom: 2%;
 }
@@ -650,6 +644,7 @@ text-decoration: none;
 
 /* for 0ther services */
 
+/* big */
 .big{
  font-size: 6vh;
  font-weight: bolder;
@@ -658,16 +653,16 @@ text-decoration: none;
  display: block;
  text-align: center;
  color: transparent;
-background-image: url(IMG-20250413-WA0025.jpg);
+background-image: url(quamdeen.jpg);
 background-clip: text;
  background-size: cover;
- animation: animation 10s ease-in-out infinite alternate;
+ animation: animation 10s ease-in-out infinite alternate; 
 }
 
-@keyframes animation{
+@keyframes animation{ 
     1%{
 background-position-x: 200px ;
-background-position-y: 200px;
+background-position-y: 200px; 
     }
     100%{
 background-position-x: -200px;
@@ -736,13 +731,12 @@ font-size: 2.5vh;
     cursor: pointer;
     font-weight: bolder;
     color: white;
-    
     border-radius: 10px;
 }
 
 /* for the  marquee */
 .marq{
-    font-size: 3vh;
+    font-size: calc(10px + 4vw);
     font-weight: bolder;
     font-family: verdana;
     text-align: center;
@@ -750,33 +744,181 @@ font-size: 2.5vh;
     text-shadow: 0px 3px 5px grey;
 }
 
+.tittle2 {
+    margin-left: 20%;
+    font-weight: bolder;
+    font-family: verdana;
+    font-size: calc(10px + 3vw);
+    padding-top: 2%;
+    display: block;
+}
+
+/* media query */
+@media (min-width:700px) {
+    /* grades text */
+    .grades{
+        margin-bottom: 10%;
+    }
+
+    /* portfolio and services button */
+        .portfolio {
+            margin-top: 0%;
+        }
+
+        /* previous work */
+        .parent1{
+            width: 60%;
+            height: calc(200px+ 28vw);
+        }
+
+        /* logos */
+                .parent01 {
+                    width: 60%;
+                    height: calc(200px + 28vw);
+                }
+
+                /* for the  first video (vertical ones) */
+                .parent004{
+                    height: 120vh;
+                }
+                                .parent003 {
+                                    height: calc(200px + 28vw);
+                                    width: 60%;
+                                }
+
+/* for projects2 */
+.projects2{
+    width: 60%;
+    height: calc(200px + 30vw);
+    margin-left: 20%;
+}
+/* is tittle */
+.tittle {
+    margin-left: 43%;
+}
+
+/* for projects2 */
+.projects3{
+    width: 60%;
+    height: calc(200px + 31vw);
+    margin-left: 20%;
+}
 
 
+/* media query for the other services */
+
+.projects1 {
+    width: 60%;
+    height: calc(200px + 32vw);
+    margin-left: 20%;
+}
+/* is tittle */
+.tittle2 {
+    margin-left: 28%;
+    font-weight: bolder;
+        font-family: verdana;
+        font-size: calc(10px + 3vw);
+        padding-top: 2%;
+        display: block;
+}
+
+/* service2 */
+.service2 {
+    font-size: 5vh;
+}
+
+/* services1 */
+.services1 {
+    font-size: 7vh;
+}
+
+/* service */
+.service {
+    font-size: 6vh;
+    margin-left: 3%;
+}
+
+/* download-cv1 */
+.download-cv1 {
+    height: calc(30px + 5vw);
+    font-size: calc(7px + 2vw);
+}
+
+/* for the sticky download cv button */
+.download-cv2 {
+    position: fixed;
+    top: 75%;
+    right: 2%;
+    font-size: 6vh;
+    display: block;
+    margin-top: 3.5%;
+    width: 7%;
+    border: none;
+    height: 15vh;
+    background: rgb(44, 166, 214);
+    cursor: pointer;
+    font-weight: bolder;
+    color: white;
+    border-radius: 10px;
+}
+
+/* media query for footer */
+/* footer */
+.footer {
+    height: calc(130px + 15vw);
+    margin-bottom: 1%;
+}
+.name1 {
+    font-size: 6vh;
+    margin-left: 33%;
+}
+
+.contact {
+    font-size: 5vh;
+    top: 15%;
+}
+
+.mail {
+    font-size: 4vh;
+    margin-top: 10%;
+}
+
+.location {
+    font-size: 5vh;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+.copyrite {
+    font-size: 3.5vh;
+    margin-top: 3%;
+}
+
+.big {
+    font-size: 15vh;
+    font-weight: bolder;
+    font-family: verdana;
+    margin: auto;
+    width: 55%;
+    display: block;
+    text-align: center;
+    color: transparent;
+    background-image: url(IMG-20250413-WA0025.jpg);
+    background-clip: text;
+    background-size: cover;
+    animation: animation 10s ease-in-out infinite alternate;  
+}
+
+/* for the telephone at the home page */
+.tell {
+    font-size: 20vh;
+    margin-left: 78%;
+    color: green;
+    text-decoration: none;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
